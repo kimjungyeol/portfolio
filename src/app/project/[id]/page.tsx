@@ -100,7 +100,7 @@ export default async function ProjectDetailPage({
           </p>
 
           {/* Stats */}
-          <div className="flex items-center gap-6 text-gray-600 dark:text-gray-400">
+          {/* <div className="flex items-center gap-6 text-gray-600 dark:text-gray-400">
             <div className="flex items-center gap-2">
               <svg
                 className="h-5 w-5"
@@ -139,7 +139,7 @@ export default async function ProjectDetailPage({
               </svg>
               <span>{formatNumber(project.likes)} 좋아요</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
