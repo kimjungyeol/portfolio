@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.png',
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  colorScheme: 'light dark',
 };
 
 export default function RootLayout({
@@ -18,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">{children}</main>
