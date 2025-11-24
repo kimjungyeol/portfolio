@@ -75,7 +75,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-gray-200 pt-8 text-center dark:border-gray-700">
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            &copy; {currentYear} Portfolio. All rights reserved.
+            &copy; {currentYear} KimJungYeol. All rights reserved.
           </p>
         </div>
       </div>

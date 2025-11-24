@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
@@ -10,12 +10,13 @@ export const metadata: Metadata = {
   icons: {
     icon: '/icon.png',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
-  colorScheme: 'light dark',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  colorScheme: 'dark',
 };
 
 export default function RootLayout({
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" suppressHydrationWarning>
+    <html lang="ko" className="dark" suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">{children}</main>

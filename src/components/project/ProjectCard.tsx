@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ProjectCardProps } from '@/types';
-import { formatNumber, formatPeriod } from '@/lib/utils';
+import { formatPeriod } from '@/lib/utils';
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (

@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import path from 'path';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -10,6 +11,7 @@ const nextConfig: NextConfig = {
     ],
   },
   output: 'export', // 정적 export 모드
+  outputFileTracingRoot: path.join(__dirname), // 프로젝트 루트 명시
 };
 
 export default nextConfig;

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { getProjectById, mockProjects } from '@/data/mockProjects';
-import { formatPeriod, formatNumber } from '@/lib/utils';
+import { formatPeriod } from '@/lib/utils';
 
 interface ProjectDetailPageProps {
   params: Promise<{
