@@ -39,7 +39,7 @@ portfolio/
 ├── src/
 │   ├── app/                      # Next.js App Router
 │   │   ├── project/[id]/        # 프로젝트 상세 페이지
-│   │   ├── about/               # 소개 페이지
+│   │   ├── about/               # 프로필 페이지
 │   │   ├── contact/             # 연락하기 페이지
 │   │   ├── api/send-email/      # 이메일 발송 API
 │   │   ├── layout.tsx           # 루트 레이아웃

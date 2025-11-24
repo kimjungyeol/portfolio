@@ -2,13 +2,20 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { getProjectById } from '@/data/mockProjects';
+import { getProjectById, mockProjects } from '@/data/mockProjects';
 import { formatPeriod, formatNumber } from '@/lib/utils';
 
 interface ProjectDetailPageProps {
   params: Promise<{
     id: string;
   }>;
+}
+
+// Generate static paths for all projects at build time
+export async function generateStaticParams() {
+  return mockProjects.map((project) => ({
+    id: project.id,
+  }));
 }
 
 export async function generateMetadata({

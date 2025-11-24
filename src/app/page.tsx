@@ -16,9 +16,12 @@ export default function Home() {
   const [selectedStatus, setSelectedStatus] = useState<
     'all' | 'ongoing' | 'completed'
   >('all');
-  const [sortBy, setSortBy] = useState<'latest' | 'oldest' | 'likes' | 'views'>(
+  const [sortBy, setSortBy] = useState<'latest' | 'oldest'>(
     'latest',
   );
+  // const [sortBy, setSortBy] = useState<'latest' | 'oldest' | 'likes' | 'views'>(
+  //   'latest',
+  // );
 
   const ongoingProjects = getOngoingProjects();
 
@@ -49,10 +52,10 @@ export default function Home() {
       <section className="border-b border-gray-200 bg-gradient-to-br from-blue-50 to-indigo-100 py-16 dark:border-gray-700 dark:from-gray-800 dark:to-gray-900">
         <div className="container-custom">
           <h1 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white md:text-5xl">
-            개발자 포트폴리오
+            포트폴리오
           </h1>
           <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-            다양한 프로젝트와 기술 스택을 활용한 개발 경험을 소개합니다.
+            다양한 프로젝트와 기술 스택을 활용한 주요 개발 경험을 소개합니다.
           </p>
 
           {/* 현재 진행중인 프로젝트 */}
@@ -108,15 +111,16 @@ export default function Home() {
                 value={sortBy}
                 onChange={(e) =>
                   setSortBy(
-                    e.target.value as 'latest' | 'oldest' | 'likes' | 'views',
+                    e.target.value as 'latest' | 'oldest',
+                    // e.target.value as 'latest' | 'oldest' | 'likes' | 'views',
                   )
                 }
                 className="rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
               >
                 <option value="latest">최신순</option>
                 <option value="oldest">오래된순</option>
-                <option value="likes">인기순</option>
-                <option value="views">조회순</option>
+                {/* <option value="likes">인기순</option>
+                <option value="views">조회순</option> */}
               </select>
             </div>
           </div>

@@ -87,7 +87,8 @@ export function cn(...classes: (string | boolean | null | undefined)[]): string 
  */
 export function sortProjects(
   projects: Project[],
-  sortBy: 'latest' | 'oldest' | 'likes' | 'views' = 'latest',
+  // sortBy: 'latest' | 'oldest' | 'likes' | 'views' = 'latest',
+  sortBy: 'latest' | 'oldest',
 ): Project[] {
   const sorted = [...projects];
 
@@ -102,10 +103,10 @@ export function sortProjects(
         (a, b) =>
           new Date(a.startDate).getTime() - new Date(b.startDate).getTime(),
       );
-    case 'likes':
-      return sorted.sort((a, b) => b.likes - a.likes);
-    case 'views':
-      return sorted.sort((a, b) => b.views - a.views);
+    // case 'likes':
+    //   return sorted.sort((a, b) => b.likes - a.likes);
+    // case 'views':
+    //   return sorted.sort((a, b) => b.views - a.views);
     default:
       return sorted;
   }

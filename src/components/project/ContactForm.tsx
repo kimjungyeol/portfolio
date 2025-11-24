@@ -78,7 +78,7 @@ export default function ContactForm() {
             htmlFor="email"
             className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
           >
-            이메일
+            받을 이메일
           </label>
           <input
             type="email"

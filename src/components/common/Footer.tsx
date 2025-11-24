@@ -38,7 +38,7 @@ export default function Footer() {
                   href="/about"
                   className="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                 >
-                  소개
+                  프로필
                 </Link>
               </li>
               <li>
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>이메일: hatssarjy@gmail.com</li>
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/kimjungyeol"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-colors hover:text-gray-900 dark:hover:text-white"

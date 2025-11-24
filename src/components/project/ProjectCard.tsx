@@ -66,7 +66,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* 통계 */}
-        <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+        {/* <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
           <div className="flex items-center gap-1">
             <svg
               className="h-4 w-4"
@@ -105,7 +105,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </svg>
             <span>{formatNumber(project.likes)}</span>
           </div>
-        </div>
+        </div> */}
       </div>
     </Link>
   );

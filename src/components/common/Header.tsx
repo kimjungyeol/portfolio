@@ -20,7 +20,7 @@ export default function Header() {
               href="/about"
               className="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
             >
-              소개
+              프로필
             </Link>
             <Link
               href="/contact"
@@ -42,7 +42,7 @@ export default function Header() {
               href="/about"
               className="text-sm text-gray-600 dark:text-gray-300"
             >
-              소개
+              프로필
             </Link>
             <Link
               href="/contact"

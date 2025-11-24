@@ -86,7 +86,7 @@ react-nextjs/
 │   │   │   └── [id]/            # 동적 라우팅
 │   │   │       ├── page.tsx     # 피드 상세 페이지
 │   │   │       └── not-found.tsx # 404 페이지
-│   │   ├── about/               # 소개 페이지
+│   │   ├── about/               # 프로필 페이지
 │   │   │   └── page.tsx
 │   │   ├── layout.tsx           # 루트 레이아웃
 │   │   ├── page.tsx             # 홈 페이지 (피드 목록)
@@ -514,7 +514,7 @@ if (!feed) {
 **메타데이터:**
 ```typescript
 export const metadata: Metadata = {
-  title: '소개 - NewsFeed App',
+  title: '프로필 - NewsFeed App',
   description: 'NewsFeed App에 대해 알아보세요',
 };
 ```

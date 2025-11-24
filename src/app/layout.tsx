@@ -4,9 +4,12 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 
 export const metadata: Metadata = {
-  title: 'Portfolio - 개발자 포트폴리오',
-  description: '개발자 포트폴리오 웹사이트입니다. 다양한 프로젝트와 경험을 확인하세요.',
-  keywords: ['포트폴리오', '개발자', '프로젝트', 'Portfolio', 'Developer'],
+  title: 'Portfolio - Kim Jung Yeol',
+  description: '포트폴리오 웹사이트입니다. 지금까지 경험한 다양한 프로젝트를 확인할 수 있습니다.',
+  keywords: ['포트폴리오', '프로젝트', 'Portfolio', 'Developer'],
+  icons: {
+    icon: '/icon.png',
+  },
 };
 
 export default function RootLayout({
