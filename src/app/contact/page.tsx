@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ContactForm from '@/components/project/ContactForm';
+// import ContactForm from '@/components/project/ContactForm';
 
 export const metadata: Metadata = {
   title: '연락하기 - Portfolio',
@@ -21,10 +21,10 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Form */}
-        <ContactForm />
+        {/* <ContactForm /> */}
 
         {/* Additional Info */}
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {/* Email */}
           <div className="card text-center">
             <div className="mb-4 flex justify-center">
