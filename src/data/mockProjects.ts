@@ -8,7 +8,23 @@ const author: Author = {
   email: 'hatssarjy@gmail.com',
 };
 
-export const mockProjects: Project[] = [
+/**
+ * endDate를 기준으로 프로젝트 상태를 동적으로 계산
+ */
+function calculateProjectStatus(endDate: string): 'ongoing' | 'completed' {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // 시간 부분 제거
+
+  const projectEndDate = new Date(endDate);
+  projectEndDate.setHours(0, 0, 0, 0); // 시간 부분 제거
+
+  return projectEndDate >= today ? 'ongoing' : 'completed';
+}
+
+/**
+ * 원본 프로젝트 데이터 (status는 동적으로 계산됨)
+ */
+const _mockProjectsData: Omit<Project, 'status'>[] = [
   {
     id: '1',
     title: '현대자동차 복경시설공사 관리 시스템 - 공장시설, 자재 관리',
@@ -44,7 +60,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2006-06-01',
     endDate: '2007-02-28',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -88,7 +103,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2007-02-01',
     endDate: '2007-04-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -132,7 +146,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2007-04-01',
     endDate: '2008-11-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -180,7 +193,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project1.png',
     startDate: '2008-12-01',
     endDate: '2010-05-31',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -224,7 +236,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2010-06-01',
     endDate: '2011-09-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -268,7 +279,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2010-06-01',
     endDate: '2011-09-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -312,7 +322,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2010-06-01',
     endDate: '2011-09-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -356,7 +365,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2011-10-01',
     endDate: '2012-02-29',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -400,7 +408,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project1.png',
     startDate: '2012-02-01',
     endDate: '2012-06-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -444,7 +451,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2012-07-01',
     endDate: '2012-11-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -488,7 +494,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2012-12-01',
     endDate: '2013-11-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -531,7 +536,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2013-11-01',
     endDate: '2014-03-31',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -575,7 +579,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2014-05-01',
     endDate: '2014-09-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -619,7 +622,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project1.png',
     startDate: '2014-09-01',
     endDate: '2015-01-31',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -663,7 +665,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2015-01-01',
     endDate: '2015-06-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -708,7 +709,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2015-08-01',
     endDate: '2015-12-31',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -752,7 +752,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2016-01-01',
     endDate: '2016-02-29',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -797,7 +796,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project1.png',
     startDate: '2016-03-01',
     endDate: '2016-08-31',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -844,7 +842,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project1.png',
     startDate: '2016-08-01',
     endDate: '2018-03-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -891,7 +888,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2018-08-01',
     endDate: '2019-04-30',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -941,7 +937,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2019-05-01',
     endDate: '2019-07-31',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -986,7 +981,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2019-08-01',
     endDate: '2020-01-31',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -1033,7 +1027,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2020-03-01',
     endDate: '2020-10-31',
-    status: 'completed',
     url: 'https://hellonature.co.kr/',
     githubUrl: '',
     author,
@@ -1079,7 +1072,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project1.png',
     startDate: '2020-11-01',
     endDate: '2020-12-31',
-    status: 'completed',
     url: '',
     githubUrl: '',
     author,
@@ -1126,7 +1118,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2021-03-02',
     endDate: '2023-08-31',
-    status: 'completed',
     url: 'https://mboe.aduana.gov.py/intcarga',
     githubUrl: '',
     author,
@@ -1187,7 +1178,6 @@ export const mockProjects: Project[] = [
     imageUrl: '/images/project2.png',
     startDate: '2024-01-02',
     endDate: '2025-12-31',
-    status: 'ongoing',
     url: 'https://ftaorigin.dti.gov.ph/',
     githubUrl: '',
     author,
@@ -1199,7 +1189,7 @@ export const mockProjects: Project[] = [
   {
     id: '27',
     title: '토너먼트 관리 시스템 개발',
-    description: '토너먼트를 생성하고 대회를 운영할 수 있는 시스템. (개인 프로젝트)',
+    description: '토너먼트를 생성하고 대회를 운영할 수 있는 시스템.',
     content: `
       <h2><프로젝트 개요></h2>
       <p>토너먼트 관리 시스템을 처음부터 끝까지 분석/설계하고 개발한 프로젝트입니다.
@@ -1242,13 +1232,12 @@ export const mockProjects: Project[] = [
         <li>AI 챗봇 적용으로 커뮤니케이션 및 사용 효율 증대</li>
       </ul>
     `,
-    category: '분석 - 설계 - 개발 (개인)',
-    tags: ['분석', '설계','개발', 'Fullstack', 'AI', 'Springboot', 'ReactJs', 'Linux', 'Nginx', 'Tomcat', '개인'],
+    category: '분석 - 설계 - 개발 - AI챗봇',
+    tags: ['분석', '설계','개발', 'Fullstack', 'AI챗봇', 'Springboot', 'ReactJs', 'Linux', 'Nginx', 'Tomcat', '개인'],
     languages: ['JavaScript', 'SpringbBoot', 'ReactJs', 'MariaDb', 'HTML5'],
     imageUrl: '/images/project1.png',
-    startDate: '2025-08-15',
+    startDate: '2025-06-15',
     endDate: '2025-11-20',
-    status: 'completed',
     url: 'http://tmnt.co.kr/',
     githubUrl: '',
     author,
@@ -1258,6 +1247,14 @@ export const mockProjects: Project[] = [
     updatedAt: '2025-12-31T00:00:00Z'
   },
 ];
+
+/**
+ * status를 동적으로 계산하여 프로젝트 목록 반환
+ */
+export const mockProjects: Project[] = _mockProjectsData.map((project) => ({
+  ...project,
+  status: calculateProjectStatus(project.endDate+''),
+}));
 
 /**
  * ID로 프로젝트 찾기

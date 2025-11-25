@@ -159,13 +159,15 @@ export default function AboutPage() {
                   Fullstack 개발 / Application Architect (AA)
                 </h3>
                 <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
-                  KTNET · 2021.03 - 현재
+                  2021.03 ~ 2025.12
                 </p>
                 <ul className="list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300">
-                  <li>파라과이 전자통관 시스템 및 필리핀 FTA 통합 플랫폼 설계 및 개발 (AA 역할)</li>
+                  <li>파라과이 전자통관 시스템설계 및 개발 (AA 역할)</li>
+                  <li>필리핀 FTA 통합 플랫폼 설계 및 개발 (AA 역할)</li>
                   <li>Angular, SpringBoot, Thymeleaf 기반 Frontend/Backend 아키텍처 설계</li>
                   <li>공통 UI 컴포넌트 및 Backend 공통 서비스 모듈 개발</li>
-                  <li>AI 머신러닝 모델 연동 및 AWS 기반 인프라 구축 및 운영</li>
+                  <li>AI 머신러닝 모델 연동</li>
+                  <li>AWS 기반 인프라/응용 프로그램 설정 및 운영</li>
                   <li>CI/CD 파이프라인 설계 및 자동화 구축</li>
                 </ul>
               </div>
@@ -175,7 +177,7 @@ export default function AboutPage() {
                   Fullstack 개발 / Application Architect (AA)
                 </h3>
                 <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
-                  2018.08 - 2021.02
+                  2018.08 ~ 2021.02
                 </p>
                 <ul className="list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300">
                   <li>PSK SBMS 시스템, 키즈케어 시스템 설계 및 개발 (AA 역할)</li>
@@ -191,7 +193,7 @@ export default function AboutPage() {
                   Fullstack 개발 / 운영
                 </h3>
                 <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
-                  2016.08 - 2018.07
+                  2016.08 ~ 2018.07
                 </p>
                 <ul className="list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300">
                   <li>현대자동차 재무 시스템 운영 및 유지보수</li>
@@ -206,7 +208,7 @@ export default function AboutPage() {
                   Fullstack 개발 / PL
                 </h3>
                 <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
-                  2012.07 - 2016.07
+                  2012.07 ~ 2016.07
                 </p>
                 <ul className="list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300">
                   <li>현대기아자동차 Global Learning System, KT Smart Learning Platform 설계 및 개발 (PL 역할)</li>
@@ -222,7 +224,7 @@ export default function AboutPage() {
                   Fullstack 개발 / 운영
                 </h3>
                 <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">
-                  2006.06 - 2012.06
+                  2006.06 ~ 2012.06
                 </p>
                 <ul className="list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300">
                   <li>현대자동차 복경시설공사 관리 시스템, 글로벌 부품소재통합 관리시스템 개발</li>
