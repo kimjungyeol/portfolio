@@ -162,11 +162,11 @@ export default function AboutPage() {
                   2021.03 ~ 2025.12
                 </p>
                 <ul className="list-inside list-disc space-y-1 text-gray-700 dark:text-gray-300">
-                  <li>파라과이 전자통관 시스템설계 및 개발 (AA 역할)</li>
                   <li>필리핀 FTA 통합 플랫폼 설계 및 개발 (AA 역할)</li>
+                  <li>파라과이 전자통관 시스템설계 및 개발 (AA 역할)</li>
+                  <li>AI 머신러닝 모델 연동</li>
                   <li>Angular, SpringBoot, Thymeleaf 기반 Frontend/Backend 아키텍처 설계</li>
                   <li>공통 UI 컴포넌트 및 Backend 공통 서비스 모듈 개발</li>
-                  <li>AI 머신러닝 모델 연동</li>
                   <li>AWS 기반 인프라/응용 프로그램 설정 및 운영</li>
                   <li>CI/CD 파이프라인 설계 및 자동화 구축</li>
                 </ul>
